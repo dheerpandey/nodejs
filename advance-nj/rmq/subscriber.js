@@ -1,3 +1,8 @@
+//https://www.cloudamqp.com/blog/2015-05-19-part2-2-rabbitmq-for-beginners_example-and-sample-code-node-js.html
+//git reset --hard HEAD
+//git remote add origin http://IP/path/to/repository
+//git clean
+
 var amqp = require('amqplib/callback_api');
 var amqpConn = null;
 start();
