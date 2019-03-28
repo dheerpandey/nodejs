@@ -1,0 +1,73 @@
+V8 and libuv
+V8 is default vm.
+Chakra from MS.
+V8=> Caters JS features.
+=> Shipping, Staed(--harmony), InProgress
+==>new-alias grep findstr [grid grep in posershell]
+=>node --v8-options | grep 'in progress'
+
+=>node --v8-options | grep gc
+
+=> autocomplete
+=> global. [gobal object], which are preloaded. all the top level functions and modules 
+    available in node.
+=>console.log(global);
+
+=>_ [last evaluated value]
+=> _.help
+    .break
+    .clear
+    .editor
+    .exit
+    .load
+    .save
+=> NODE_NO_READLINE=1
+    rlwarp node
+=> var r = _;
+
+=> const repl = require('repl');
+    repl.start([options]);
+
+    repl.context.lodash = require('lodash');
+=> node --help
+=> node -c
+        -p
+=>node -p 'process.arch'
+
+=> global objects
+    process and buffer objects
+    process.release.lts
+
+
+==>process.stdin.resume();
+    process.on('exit',()=>{
+        //CAN'T USE EVENT LOOP.
+    });
+
+    process.on('uncaughtException',()=>{
+        //Do cleanup and then exit.
+        process.exit(1);//Will invoke exit event handler.
+
+    })
+=>process.stdin.resume(); //keep the event loop buzzy.
+
+=> buffer object
+to work in binary stream of data.
+there is a buffer == there is a character encoding.
+buffer is a lower level data structure. represents a sequence of binary data
+once a buffer is allocated, it can't be resized.
+Buffer.alloc(8)
+Buffer.allocUnsafe(8)
+Buffer.alloc(8).fill(1).toString()
+
+=> StringDecoder
+
+=> modeule object
+
+
+
+
+
+
+
+

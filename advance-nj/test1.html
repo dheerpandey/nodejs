@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input[type=text] {
+            border: 1px solid red;
+        }
+    </style>
+    
+</head>
+<body>
+    <p>
+
+            <input type="text" placeholder="Some Data" name="inputData"/>
+            <input type="button" name="btnClick" value="Click" onclick="LoadData()"/>
+    </p>
+    <br/>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+        asdsalsdkjljsdalksj
+    </canvas>
+    <form action="/aa.php">
+    <input type="submit">
+    </form>
+
+    <script>
+            var c =document.getElementById('myCanvas');
+            var ctx = c.getContext("2d");        
+            ctx.beginPath();
+            ctx.arc(95,50,0,0.5);
+            
+            ctx.stroke();
+            function Loader() {
+                this.status = "ready";
+                this.temp = 50;
+                this.updateStatus = function (newStatus) {
+                    status = newStatus;                    
+                }
+            }
+
+            var loader = new Loader();
+
+            document.getElementById('loadTemp').addEventListener("click", function (eventData) {
+                loader.temp = loadTemp();
+                
+                
+            });
+
+        </script>
+    
+</body>
+</html>
